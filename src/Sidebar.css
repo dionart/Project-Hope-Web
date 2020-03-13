@@ -1,0 +1,110 @@
+aside{
+    margin:90px;
+    margin-left: -30px;
+    width: 380px;
+    background: #FFF;
+    box-shadow: 0 0 100px 0 rgba(0,0,0,0.2);
+    border-radius:12px;
+    padding:10px 20px;
+    padding-bottom: 10px;
+}
+
+
+aside .input-block + .input-block{
+    margin-top: 20px;
+
+}
+
+aside .input-group{
+    margin-top :20px;
+    margin-left: 20px;
+    display:grid;
+    gap:25px;
+    grid-template-columns: 1fr 1fr;
+}
+
+aside .input-group .input-block{
+    margin-top:0;
+}
+
+aside .input-group .input-block label{
+    color: rgb(158, 155, 155);
+    font-size: 15px;
+}
+
+
+aside .input-block label{
+    color: rgb(158, 155, 155);
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+}
+
+aside .input-block-senha button[type=forgot]{
+    color: rgb(158, 155, 155);
+    background-color: #FFF;
+    font-size: 16px;
+    border:0;
+    text-align: center;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+aside .input-block input{
+    margin-top: 15px;
+    width: 100%;
+    height: 32px;
+    font-size: 16px;
+    color: rgb(77, 77, 77);
+    border:0;
+    border-bottom: 1px solid #EEE;
+
+}
+
+aside button[type=submit]{
+    width: 100%;
+    border:0;
+    margin-top:20px;
+    background: #4507A1;
+    border-radius: 5px;
+    padding:15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFF;
+    cursor: pointer;
+    transition: background 0.5s;
+
+}
+
+aside button[type=create]{
+    width: 97%;
+    background: #FFF;
+    margin-top: -4px;
+    margin-left: -10px;
+    border-color: #4507A1;
+    border-width: 2px;
+    border-radius: 5px;
+    padding:5px 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #4507A1;
+    cursor: pointer;
+    transition: background 0.5s;
+
+}
+
+aside button[type=create]:hover{
+    background: rgb(206, 206, 206);
+}
+
+aside button[type=submit]:hover{
+    background: #6931ca
+}
+
+aside header img{
+    width: 100%;
+}
