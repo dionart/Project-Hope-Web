@@ -1,6 +1,5 @@
 import *as firebase from "firebase/app"
 import "firebase/auth"
-import { configure } from "@testing-library/react";
 
 
 const app = firebase.initializeApp({
@@ -13,7 +12,5 @@ const app = firebase.initializeApp({
     appId: "1:468342701618:web:3e79591928eb2597bd462b",
     measurementId: "G-VF25N5VR3S"
 });
-
-const fire = firebase.initializeApp(config);
 
 export default app;
