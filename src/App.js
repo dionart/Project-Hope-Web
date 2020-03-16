@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 
 import './App.css';
 import './global.css';
-import './App.css';
 import './Sidebar.css';
 import './Main.css';
 import Home from './Home';

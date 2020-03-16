@@ -1,46 +1,24 @@
 import React, { Component } from 'react';
 import logo from './pics/logo.png';
+import './ForgotScreen.css'
 import storeimg from './pics/dionart.png';
 import layout from './pics/layout.png';
 
-
 import fire from './base';
 
-class Login extends Component {
+class Forgot extends Component {
   constructor(props) {
     super(props);
-    this.login = this.login.bind(this);
     this.reset = this.reset.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.signup = this.signup.bind(this);
     this.state = {
       email: '',
-      password: '',
       error: '',
     };
   }
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value });
-  }
-
-  login(e) {
-    e.preventDefault();
-    fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
-    }).catch((error) => {
-        this.setState({error: 'Informações incorretas'})
-        console.log(error);
-      });
-  }
-
-  signup(e){
-    e.preventDefault();
-    fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
-    }).then((u)=>{console.log(u)})
-    .catch((error) => {
-        this.setState({error: 'Usuário já cadastrado'})
-        console.log(error);
-      })
   }
 
   reset(e){
@@ -59,36 +37,28 @@ class Login extends Component {
       
       
         <aside>
-          <header>
-            <div className = "image">
-              <img src={logo}/>
-            </div>  
-          </header>
+            <header>
+                <div className = "image">
+                <img src={logo}/>
+                </div>  
+            </header>
           
+            <div className = "label-text">
+                <label>Digite seu email para receber um link de verificação</label>
+
+            </div>
+
             <div className = "input-block">
-              <label>Email</label>
               <input 
                 value={this.state.email} onChange={this.handleChange} type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
               />
             </div>
-  
-            <div className = "input-block"> 
-              <label>Senha</label>
-              <input 
-                value={this.state.password} onChange={this.handleChange} type="password" name="password" class="form-control" id="exampleInputPassword1"
-              />
-            </div>
             
-            <button type="submit" onClick={this.login}>Entrar</button>
+            <button type="submit" onClick={this.reset}>Enviar email</button>
 
             <div className="error-message">
               <h1>{this.state.error}</h1>
             </div>  
-            
-            <div className = "input-block-senha"> 
-              <button type="forgot" onClick={this.reset}>Esqueci minha senha</button>
-            
-            </div>
   
             <div className="input-group">
               <div className = "input-block">
@@ -130,4 +100,4 @@ class Login extends Component {
     );
   }
 }
-export default Login;
+export default Forgot;

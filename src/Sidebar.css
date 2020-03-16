@@ -47,7 +47,7 @@ aside .input-block-senha button[type=forgot]{
     border:0;
     text-align: center;
     display: block;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 50px;
     cursor: pointer;
     width: 100%;
@@ -100,6 +100,13 @@ aside button[type=create]{
 
 aside button[type=create]:hover{
     background: rgb(206, 206, 206);
+}
+
+aside .error-message{
+    font-size: 12px;
+    text-align: center;
+    padding-top: 10px;
+    color: #bb0000;
 }
 
 aside button[type=submit]:hover{

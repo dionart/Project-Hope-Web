@@ -1,7 +1,6 @@
 import *as firebase from "firebase/app"
 import "firebase/auth"
 
-
 const app = firebase.initializeApp({
     apiKey: "AIzaSyDLuZ4opjKJfSNrRaoVcYerZxQYpBk6AWI",
     authDomain: "project-hope-c2db1.firebaseapp.com",
