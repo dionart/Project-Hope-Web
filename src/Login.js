@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import logo from './pics/logo.png';
 import storeimg from './pics/dionart.png';
 import layout from './pics/layout.png';
-
+import './Sidebar.css';
+import './Main.css';
+import { Link } from 'react-router-dom'
 
 import fire from './base';
 
@@ -58,7 +60,7 @@ class Login extends Component {
         <div id = "app">
       
       
-        <aside>
+        <aside className = "aside-login">
           <header>
             <div className = "image">
               <img src={logo}/>
@@ -86,8 +88,11 @@ class Login extends Component {
             </div>  
             
             <div className = "input-block-senha"> 
-              <button type="forgot" onClick={this.reset}>Esqueci minha senha</button>
-            
+              
+              <Link to="/forgot" style={{ textDecoration: 'none' }}>
+                  <button type="forgot">Esqueci minha senha</button>
+              </Link>
+
             </div>
   
             <div className="input-group">
@@ -130,4 +135,5 @@ class Login extends Component {
     );
   }
 }
+
 export default Login;

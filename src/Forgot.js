@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import logo from './pics/logo.png';
-import './ForgotScreen.css'
 import storeimg from './pics/dionart.png';
 import layout from './pics/layout.png';
+import './ForgotScreen.css';
+import './Main.css';
 
 import fire from './base';
 
@@ -33,10 +34,8 @@ class Forgot extends Component {
 
   render() {
     return (
-        <div id = "app">
-      
-      
-        <aside>
+      <div id = "app">
+        <aside id = "aside-forgot">
             <header>
                 <div className = "image">
                 <img src={logo}/>
@@ -60,7 +59,7 @@ class Forgot extends Component {
               <h1>{this.state.error}</h1>
             </div>  
   
-            <div className="input-group">
+          <div className="input-group">
               <div className = "input-block">
                 <label>Não possui conta?</label>
                 

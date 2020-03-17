@@ -1,0 +1,111 @@
+#aside-forgot{
+    margin:90px;
+    margin-left: -30px;
+    width: 380px;
+    height:600px;
+    align-items: center;
+    background: #FFF;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+    border-radius:12px;
+    padding:10px 20px;
+}
+
+#aside-forgot .label-text label{
+    font-size: 18px;
+    font-weight: bold;
+    color: #6e6d6d;
+}
+#aside-forgot .input-block + .input-block{
+    margin-top: 20px;
+
+}
+
+#aside-forgot .input-group{
+    padding-top: 50px;
+    margin-top :20px;
+    margin-left: 20px;
+    display:grid;
+    gap:25px;
+    grid-template-columns: 1fr 1fr;
+}
+
+#aside-forgot .input-group .input-block{
+    margin-top:0;
+}
+
+#aside-forgot .input-group .input-block label{
+    color: rgb(158, 155, 155);
+    font-size: 16px;
+}
+
+
+#aside-forgot .input-block label{
+    color: rgb(158, 155, 155);
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+}
+
+#aside-forgot .input-block input{
+    margin-top: 15px;
+    width: 100%;
+    height: 32px;
+    font-size: 16px;
+    color: rgb(77, 77, 77);
+    border:0;
+    border-bottom: 1px solid #EEE;
+
+}
+
+#aside-forgot button[type=submit]{
+    width: 100%;
+    border:0;
+    margin-top:25px;
+    background: #4507A1;
+    border-radius: 5px;
+    padding:15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFF;
+    cursor: pointer;
+    transition: background 0.5s;
+
+}
+
+#aside-forgot button[type=create]{
+    width: 97%;
+    background: #FFF;
+    margin-top: -4px;
+    margin-bottom: 35px;
+    margin-left: -10px;
+    border-color: #4507A1;
+    border-width: 2px;
+    border-radius: 5px;
+    padding:5px 5px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #4507A1;
+    cursor: pointer;
+    transition: background 0.5s;
+
+}
+
+#aside-forgot button[type=create]:hover{
+    background: rgb(206, 206, 206);
+}
+
+#aside-forgot .error-message{
+    font-size: 12px;
+    text-align: center;
+    padding-top: 10px;
+    color: #bb0000;
+}
+
+#aside-forgot button[type=submit]:hover{
+    background: #6931ca
+}
+
+#aside-forgot header img{
+    padding-top: 50px;
+    width: 100%;
+}
