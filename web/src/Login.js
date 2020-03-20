@@ -27,21 +27,18 @@ class Login extends Component {
 
   login(e) {
     e.preventDefault();
-    this.setState({redirect:true});
+    this.setState({user:true})
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
     }).catch((error) => {
-        this.setState({error: 'Informações incorretas'})
+        this.setState({error: 'Informações incorretas', redirect:false});
         console.log(error);
       });
   }
 
   render() {
-    if(this.state.redirect){
-      return <Redirect to="/" />
-    }else{
+    
     return (
         <div id = "app">
-      
       
         <aside className = "aside-login">
           <header>
@@ -117,7 +114,7 @@ class Login extends Component {
       </div>
     
     );
-    }
+    
   }
 }
 

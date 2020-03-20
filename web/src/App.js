@@ -5,8 +5,6 @@ import './global.css';
 import Home from './Home';
 import Login from './Login';
 import fire from "./base";
-import Routes from './routes';
-import Forgot from './Forgot'
 
 
 class App extends Component {

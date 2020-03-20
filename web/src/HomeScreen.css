@@ -9,11 +9,37 @@ div .container-row {
     margin: 50px;
 }
 
+.container header{  
+    text-align: center;
+}
+
+.container header img{
+    width: 70%;
+}
+
+.container-row .container h1{
+    color: #666;
+}
+
+.container-row .container button[type = logout]{
+    width: 100%;
+    border:0;
+    margin-top:20px;
+    background: #4507A1;
+    border-radius: 5px;
+    padding:15px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFF;
+    cursor: pointer;
+    transition: background 0.5s;
+}
 .container-row .container {
     padding: 30px 20px;
     border-radius: 10px;
     background-color: #fff;
     margin-right: 50px;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2);
 }
 
 .cards ul {
@@ -26,20 +52,26 @@ div .container-row {
 
 li.card {
     background: #fff;
+    height: 200px;
     box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 20px;
 }
 
 li header {
+    padding-top: 30px;
+    text-align: center;
     display: block;
-    font-size: 17px;
+    font-weight: bold;
+    font-size: 28px;
     color: #333;
 }
 
 li p {
+    padding-top: 10px;
+    text-align: center;
     color: #666;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 20px;
     margin: 10px 0;
 }

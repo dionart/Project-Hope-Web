@@ -17,6 +17,7 @@ class Login extends Component {
       email: '',
       password: '',
       displayName:'',
+      diplayLastName:'',
       user : null,
       error: '',
       redirect: false,
@@ -35,13 +36,14 @@ class Login extends Component {
             const userCredentials = await fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password);
             if (userCredentials.user) {
                 console.log(userCredentials.user);
+                this.setState({redirect:true});
                 await userCredentials.user.updateProfile({
-                    displayName: this.state.displayName,
+                    displayName: `${this.state.displayName} ${this.state.displayLastName}`,
                 });
             }
         } catch (error) {
             console.log(error);
-            this.setState({error: 'E-mail já existe ou está mal formatado!', redirect: true});
+            this.setState({error: 'E-mail já existe ou está mal formatado!'});
         }
     }
 }
@@ -73,7 +75,7 @@ class Login extends Component {
                     <div className = "input-block2">
                         <label>Sobrenome</label>
                         <input 
-                            value={this.state.displayName} onChange={this.handleChange} type="displayName" name="displayNamee" id="displayName_hope"
+                            value={this.state.displayLastName} onChange={this.handleChange} type="displayLastName" name="displayLastName" id="displayLastName_hope"
                         />
                     </div>
                 </div>

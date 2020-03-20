@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import fire from './base';
+import defaultpic from './pics/default.png';
 import { Redirect } from 'react-router-dom';
 import api from './services/api';
+import './HomeScreen.css';
 
 class Home extends Component {
     constructor(props) {
@@ -24,6 +26,7 @@ class Home extends Component {
 
     user (){
         const user = fire.auth().currentUser;
+        console.log(fire.auth().currentUser);
         this.setState({user});
     }
 
@@ -41,11 +44,17 @@ class Home extends Component {
         return (
            <div className = "container-row">
                 <div className = "container">
+                        <header>
+                            <div className = "image">
+                            <img src={defaultpic}/>
+                            </div>  
+                        </header>
+                        
                         <h1>
-                            Ola, {this.state.user && this.state.user.displayName}
+                            Bem vindo, {this.state.user && this.state.user.displayName}
                         </h1>
                             
-                        <button onClick={this.logout}>Logout</button>
+                        <button type= "logout" onClick={this.logout}>Logout</button>
                 </div>
 
                 <div className = "cards">

@@ -4,6 +4,7 @@ import storeimg from './pics/dionart.png';
 import layout from './pics/layout.png';
 import './ForgotScreen.css';
 import './Main.css';
+import { Link, Redirect } from 'react-router-dom';
 
 import fire from './base';
 
@@ -72,7 +73,10 @@ class Forgot extends Component {
               
   
             <div className = "input-block">
-              <button type="create" onClick ={this.signup}>Criar conta</button>
+              
+              <Link to="/create" style={{ textDecoration: 'none' }}>
+                <button type="create">Criar conta</button>
+              </Link>
                 
             </div>
           </div>
