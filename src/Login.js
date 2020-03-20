@@ -4,7 +4,7 @@ import storeimg from './pics/dionart.png';
 import layout from './pics/layout.png';
 import './Sidebar.css';
 import './Main.css';
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 import fire from './base';
 
@@ -12,13 +12,12 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.login = this.login.bind(this);
-    this.reset = this.reset.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.signup = this.signup.bind(this);
     this.state = {
       email: '',
       password: '',
       error: '',
+      redirect: false,
     };
   }
 
@@ -28,6 +27,7 @@ class Login extends Component {
 
   login(e) {
     e.preventDefault();
+    this.setState({redirect:true});
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
     }).catch((error) => {
         this.setState({error: 'Informações incorretas'})
@@ -35,27 +35,10 @@ class Login extends Component {
       });
   }
 
-  signup(e){
-    e.preventDefault();
-    fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((u)=>{
-    }).then((u)=>{console.log(u)})
-    .catch((error) => {
-        this.setState({error: 'Usuário já cadastrado'})
-        console.log(error);
-      })
-  }
-
-  reset(e){
-    e.preventDefault();
-    fire.auth().sendPasswordResetEmail(this.state.email).then((u)=>{
-    }).then((u)=>{console.log(u)})
-    .catch((error) => {
-        this.setState({error: 'Email não registrado'})
-        console.log(error);
-      })
-  }
-
   render() {
+    if(this.state.redirect){
+      return <Redirect to="/" />
+    }else{
     return (
         <div id = "app">
       
@@ -103,8 +86,9 @@ class Login extends Component {
               
   
             <div className = "input-block">
-              <button type="create" onClick ={this.signup}>Criar conta</button>
-                
+              <Link to="/create" style={{ textDecoration: 'none' }}>
+                <button type="create">Criar conta</button>
+              </Link> 
             </div>
           </div>
   
@@ -133,6 +117,7 @@ class Login extends Component {
       </div>
     
     );
+    }
   }
 }
 

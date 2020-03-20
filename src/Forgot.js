@@ -35,7 +35,7 @@ class Forgot extends Component {
   render() {
     return (
       <div id = "app">
-        <aside id = "aside-forgot">
+        <aside className="aside-forgot">
             <header>
                 <div className = "image">
                 <img src={logo}/>
@@ -43,7 +43,12 @@ class Forgot extends Component {
             </header>
           
             <div className = "label-text">
-                <label>Digite seu email para receber um link de verificação</label>
+                <label>Redefinir senha</label>
+
+            </div>
+
+            <div className = "label-description">
+                <label>Digite seu email para redefinir sua senha</label>
 
             </div>
 
