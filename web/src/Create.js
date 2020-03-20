@@ -4,7 +4,7 @@ import storeimg from './pics/dionart.png';
 import layout from './pics/layout.png';
 import './CreateScreen.css';
 import './Main.css';
-import { Link, Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 
 import fire from './base';
 
